@@ -1,0 +1,9 @@
+name = UserDeck
+description = A Drupal module to easily integrate the UserDeck embedded support software into your Drupal website.
+core = 7.x
+version = 7.x-1.0
+package = UserDeck
+configure = admin/config/content/userdeck
+
+; Includes
+files[] = includes/userdeck.admin.inc

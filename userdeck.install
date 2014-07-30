@@ -1,0 +1,16 @@
+<?php
+
+/*
+ * Implements hook_uninstall().
+ */
+function userdeck_uninstall()
+{
+  $var_del = array(
+    'userdeck_guides_key_nonce',
+    'userdeck_guides_key',
+  );
+
+  foreach ($var_del as $var) {
+    variable_del($var);
+  }
+}
