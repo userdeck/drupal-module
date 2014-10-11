@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * Implements hook_uninstall().
  */
 function userdeck_uninstall()

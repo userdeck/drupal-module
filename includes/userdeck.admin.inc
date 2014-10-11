@@ -4,7 +4,7 @@
  * UserDeck module include file for admin pages.
  */
 
-/*
+/**
  * Builds basic UserDeck Admin settings page
  */
 function userdeck_admin()
@@ -163,7 +163,7 @@ function userdeck_admin()
   return $form;
 }
 
-/*
+/**
  * UserDeck Admin Settings form validation callback.
  */
 function userdeck_admin_validate($form, &$form_state)
@@ -188,7 +188,7 @@ function userdeck_admin_validate($form, &$form_state)
   return true;
 }
 
-/*
+/**
  * UserDeck Admin settings form submit callback.
  */
 function userdeck_admin_submit($form, &$form_state)
