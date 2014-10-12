@@ -90,7 +90,7 @@ function userdeck_admin() {
       '#title' => t('Shortcode'),
       '#disabled' => 1,
       '#default_value' => userdeck_get_guides_shortcode(),
-      '#description' => 'Copy and paste this code into the body of the page you would like to display Guides on.'
+      '#description' => 'Copy and paste this code into the body of the page you would like to display Guides on.',
     );
 
   } else {
@@ -155,7 +155,7 @@ function userdeck_admin() {
           #button-connect a { padding: 10px 20px; margin: 0;}
           #iframe-guides { display: none; box-shadow: 0 1px 1px rgba(0,0,0,.04); border: 1px solid #e5e5e5; padding: 2px; background: #fff; }
         </style>
-      "
+      ",
     );
   }
 
