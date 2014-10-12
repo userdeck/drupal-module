@@ -31,7 +31,6 @@ var UserDeck = {
     disableConnect: function () {
         jQuery('#button-connect').hide();
         jQuery('#feature-wrapper').hide();
-        //.removeClass('button-primary').addClass('button-secondary')
     },
 
     _receiveMessage: function (event) {
