@@ -93,7 +93,8 @@ function userdeck_admin() {
       '#description' => 'Copy and paste this code into the body of the page you would like to display Guides on.',
     );
 
-  } else {
+  }
+  else {
 
     if (variable_get('userdeck_guides_key_nonce', FALSE)) {
       variable_del('userdeck_guides_key_nonce');
@@ -177,7 +178,8 @@ function userdeck_admin_validate($form, &$form_state) {
         form_set_error('create_a_page', 'A page with that name already exists.');
         return FALSE;
       }
-    } else {
+    }
+    else {
       form_set_error('create_a_page', 'You must enter a name for the new page.');
       return FALSE;
     }
