@@ -136,12 +136,12 @@ function userdeck_admin_validate($form, &$form_state) {
       $res = db_query("SELECT nid, title FROM {node} WHERE type = 'page' AND status = 1 AND title = '$page_name'");
       $nodes = $res->fetchAllKeyed();
       if ($nodes) {
-        form_set_error('create_a_page', 'A page with that name already exists.');
+        form_set_error('create_a_page', t('A page with that name already exists.'));
         return FALSE;
       }
     }
     else {
-      form_set_error('create_a_page', 'You must enter a name for the new page.');
+      form_set_error('create_a_page', t('You must enter a name for the new page.'));
       return FALSE;
     }
   }
@@ -180,7 +180,7 @@ function userdeck_admin_submit($form, &$form_state) {
   }
 
   if (!$nid) {
-    form_set_error('guides', 'There was an error processing the form, please try again.');
+    form_set_error('guides', t('There was an error processing the form, please try again.'));
   }
 
   return (bool) $nid;
