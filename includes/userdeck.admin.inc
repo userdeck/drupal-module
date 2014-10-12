@@ -86,7 +86,7 @@ function userdeck_admin() {
       '#title' => t('Shortcode'),
       '#disabled' => 1,
       '#default_value' => userdeck_get_guides_shortcode(),
-      '#description' => 'Copy and paste this code into the body of the page you would like to display Guides on.',
+      '#description' => t('Copy and paste this code into the body of the page you would like to display Guides on.'),
     );
 
   }
