@@ -20,12 +20,7 @@ function userdeck_admin() {
 
   $form['userdeck']['header'] = array(
     '#type' => 'markup',
-    '#markup' => '
-      <h2>UserDeck</h2>
-      <p>
-        <a href="http://userdeck.com?utm_source=drupal&utm_medium=link&utm_campaign=website" target="_blank">UserDeck</a>
-        provides customer support software that embeds into your Drupal website.
-      </p>',
+    '#markup' => '<h2>UserDeck</h2><p><a href="http://userdeck.com?utm_source=drupal&utm_medium=link&utm_campaign=website" target="_blank">UserDeck</a> provides customer support software that embeds into your Drupal website.</p>',
   );
 
   if ($guides_key = variable_get('userdeck_guides_key', FALSE)) {
@@ -110,54 +105,19 @@ function userdeck_admin() {
 
     $form['userdeck']['connect'] = array(
       '#type' => 'markup',
-      '#markup' => '
-        <p>
-          An account is required to use the plugin. Don\'t have an account? You can create one for free.
-        </p>
-        <div id="button-connect">
-          <h3>Connect to UserDeck</h3>
-          <a href="javascript:void(0)" onclick="UserDeck.showConnect(\'login\')" class="button">Login</a>
-          <span style = "margin: 0 10px; font-size: 16px; line-height: 42px;" >or</span >
-          <a href="javascript:void(0)" onclick="UserDeck.showConnect(\'signup\')" class="button" >Signup</a>
-        </div>
-        <div id = "connect-frame" ></div>
-      ',
+      '#markup' => '<p>An account is required to use the plugin. Don\'t have an account? You can create one for free.</p><div id="button-connect"><h3>Connect to UserDeck</h3><a href="javascript:void(0)" onclick="UserDeck.showConnect(\'login\')" class="button">Login</a><span style = "margin: 0 10px; font-size: 16px; line-height: 42px;" >or</span ><a href="javascript:void(0)" onclick="UserDeck.showConnect(\'signup\')" class="button" >Signup</a></div><div id = "connect-frame" ></div>',
     );
 
     $form['userdeck']['guides']['features'] = array(
       '#type' => 'markup',
-      '#markup' => '
-          <h2>Features</h2>
-          <h4>Guides</h4>
-          <p>
-            A knowledge base widget that embeds inline to any page of your Drupal website.
-          </p>
-          <p>
-            It inherits your theme\'s design and blends right in.
-          </p>
-          <p>
-            You can embed a collection, category, or a single article instead of an entire knowledge base.
-          </p>
-          <p>
-            Your users will save time by finding answers to common questions through self service.
-          </p>
-          <p>
-            <a href="http://userdeck.com/guides?utm_source=drupal&utm_medium=link&utm_campaign=website" target="_blank">Learn more about Guides</a>
-          </p>
-        ',
+      '#markup' => '<h2>Features</h2><h4>Guides</h4><p>A knowledge base widget that embeds inline to any page of your Drupal website.</p><p>It inherits your theme\'s design and blends right in.</p><p>You can embed a collection, category, or a single article instead of an entire knowledge base.</p><p>Your users will save time by finding answers to common questions through self service.</p><p><a href="http://userdeck.com/guides?utm_source=drupal&utm_medium=link&utm_campaign=website" target="_blank">Learn more about Guides</a></p>',
       '#prefix' => '<div id="feature-wrapper">',
       '#suffix' => '</div>',
     );
 
     $form['userdeck']['guides']['style'] = array(
       '#type' => 'markup',
-      '#markup' => "
-        <style type = 'text/css' >
-          #button-connect { margin: 40px 0; }
-          #button-connect a { padding: 10px 20px; margin: 0;}
-          #iframe-guides { display: none; box-shadow: 0 1px 1px rgba(0,0,0,.04); border: 1px solid #e5e5e5; padding: 2px; background: #fff; }
-        </style>
-      ",
+      '#markup' => "<style type = 'text/css' >#button-connect { margin: 40px 0; } #button-connect a { padding: 10px 20px; margin: 0;} #iframe-guides { display: none; box-shadow: 0 1px 1px rgba(0,0,0,.04); border: 1px solid #e5e5e5; padding: 2px; background: #fff; }</style>",
     );
   }
 
