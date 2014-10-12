@@ -23,7 +23,7 @@ function userdeck_admin() {
     '#markup' => '<h2>UserDeck</h2><p><a href="http://userdeck.com?utm_source=drupal&utm_medium=link&utm_campaign=website" target="_blank">UserDeck</a> provides customer support software that embeds into your Drupal website.</p>',
   );
 
-  if ($guides_key = variable_get('userdeck_guides_key', FALSE)) {
+  if (variable_get('userdeck_guides_key', FALSE)) {
     $form['userdeck']['guides'] = array(
       '#type' => 'fieldset',
       '#title' => t('Guides'),
