@@ -5,7 +5,7 @@
  */
 
 /**
- * Builds basic UserDeck Admin settings page
+ * Builds basic UserDeck Admin settings page.
  */
 function userdeck_admin() {
   $form = array();
