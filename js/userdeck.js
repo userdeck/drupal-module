@@ -1,4 +1,3 @@
-
 /**
  * @file
  * Handles connecting account to Drupal.
