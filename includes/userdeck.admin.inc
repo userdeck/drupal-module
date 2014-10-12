@@ -198,13 +198,14 @@ function userdeck_admin_submit($form, &$form_state) {
   $nid = FALSE;
 
   switch ($clicked['#value']) {
-    case 'Create Page' :
+    case 'Create Page':
       $nid = userdeck_create_new_guides_page($vals['create_a_page']);
       if ($nid) {
         $node = node_load($nid);
         drupal_set_message("<a href='/node/$nid'>{$node->title}</a> created with Guides shortcode!");
       }
       break;
+
     case 'Add to Page':
       $nid = userdeck_add_guide_to_page($vals['add_to_page']);
       if ($nid) {
@@ -212,7 +213,8 @@ function userdeck_admin_submit($form, &$form_state) {
         drupal_set_message("Guides shortcode added to <a href='/node/$nid'>{$node->title}</a>!");
       }
       break;
-    default :
+
+    default:
       break;
   }
 
