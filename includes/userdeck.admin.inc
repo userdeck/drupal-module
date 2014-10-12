@@ -177,15 +177,15 @@ function userdeck_admin_validate($form, &$form_state)
       $nodes = $res->fetchAllKeyed();
       if ($nodes) {
         form_set_error('create_a_page', 'A page with that name already exists.');
-        return false;
+        return FALSE;
       }
     } else {
       form_set_error('create_a_page', 'You must enter a name for the new page.');
-      return false;
+      return FALSE;
     }
   }
 
-  return true;
+  return TRUE;
 }
 
 /**
@@ -196,7 +196,7 @@ function userdeck_admin_submit($form, &$form_state)
   $clicked = $form_state['clicked_button'];
   $vals = $form_state['values'];
 
-  $nid = false;
+  $nid = FALSE;
 
   switch ($clicked['#value']) {
     case 'Create Page' :

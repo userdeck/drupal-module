@@ -71,7 +71,7 @@ function userdeck_get_guides_shortcode() {
   $guides_key = variable_get('userdeck_guides_key');
 
   if (!$guides_key) {
-    return false;
+    return FALSE;
   }
 
   return "[userdeck_guides key='$guides_key']";
@@ -129,7 +129,7 @@ function userdeck_create_new_guides_page($title) {
 function userdeck_add_guide_to_page($nid) {
   $node = node_load($nid);
   if (!$node || !property_exists($node, 'body')) {
-    return false;
+    return FALSE;
   }
 
   $node->body['und'][0]['value'] .= userdeck_get_guides_shortcode();
