@@ -1,3 +1,9 @@
+
+/**
+ * @file
+ * Handles connecting account to Drupal.
+ */
+
 var UserDeck = {
 
     connected: false,
