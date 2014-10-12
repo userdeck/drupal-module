@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Contains install and update functions for UserDeck.
+ */
+
+/**
  * Implements hook_uninstall().
  */
 function userdeck_uninstall()
