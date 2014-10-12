@@ -7,8 +7,7 @@
 /**
  * Builds basic UserDeck Admin settings page
  */
-function userdeck_admin()
-{
+function userdeck_admin() {
   $form = array();
 
   $form['userdeck'] = array(
@@ -166,8 +165,7 @@ function userdeck_admin()
 /**
  * UserDeck Admin Settings form validation callback.
  */
-function userdeck_admin_validate($form, &$form_state)
-{
+function userdeck_admin_validate($form, &$form_state) {
   $clicked = $form_state['clicked_button'];
   $vals = $form_state['values'];
 
@@ -191,8 +189,7 @@ function userdeck_admin_validate($form, &$form_state)
 /**
  * UserDeck Admin settings form submit callback.
  */
-function userdeck_admin_submit($form, &$form_state)
-{
+function userdeck_admin_submit($form, &$form_state) {
   $clicked = $form_state['clicked_button'];
   $vals = $form_state['values'];
 

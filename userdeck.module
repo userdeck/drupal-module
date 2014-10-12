@@ -34,8 +34,7 @@ function userdeck_menu() {
 /**
  * Implements hook_node_view
  */
-function userdeck_node_view($node, $view_mode, $langcode)
-{
+function userdeck_node_view($node, $view_mode, $langcode) {
   if ('full' != $view_mode || !array_key_exists('body', $node->content) || FALSE === strpos($node->content['body'][0]['#markup'], 'userdeck_guides')) {
     return $node;
   }
@@ -88,8 +87,7 @@ function userdeck_output_guides_code($key) {
 /**
  * preg_replace callback that replaces a shortcode with markup.
  */
-function userdeck_process_shortcode($matches)
-{
+function userdeck_process_shortcode($matches) {
   $params = explode(" ", $matches[1]);
   foreach ($params as $param) {
     list($key, $val) = explode("=", $param);
