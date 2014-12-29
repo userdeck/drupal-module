@@ -113,9 +113,9 @@ function userdeck_create_new_guides_page($title) {
   $node->status = 1;
   $node->promote = 0;
   $node->comment = 0;
-  $node->body['und'][0]['value'] = userdeck_get_guides_shortcode();
-  $node->body['und'][0]['summary'] = 'Customer Support Software';
-  $node->body['und'][0]['format'] = filter_default_format();
+  $node->body[LANGUAGE_NONE][0]['value'] = userdeck_get_guides_shortcode();
+  $node->body[LANGUAGE_NONE][0]['summary'] = 'Customer Support Software';
+  $node->body[LANGUAGE_NONE][0]['format'] = filter_default_format();
   $node = node_submit($node);
   node_save($node);
   return $node->nid;
@@ -130,7 +130,7 @@ function userdeck_add_guide_to_page($nid) {
     return FALSE;
   }
 
-  $node->body['und'][0]['value'] .= userdeck_get_guides_shortcode();
+  $node->body[LANGUAGE_NONE][0]['value'] .= userdeck_get_guides_shortcode();
   node_save($node);
   return $nid;
 }
