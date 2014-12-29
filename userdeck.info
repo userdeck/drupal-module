@@ -3,6 +3,3 @@ description = A Drupal module to easily integrate the UserDeck embedded support 
 core = 7.x
 package = UserDeck
 configure = admin/config/content/userdeck
-
-; Includes
-files[] = includes/userdeck.admin.inc
